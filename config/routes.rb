@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  get 'store_front/show'
+
+  resources :products
+
+  devise_for :users
+
+  root 'store_front#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
