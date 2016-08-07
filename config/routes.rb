@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'store_front/show'
+  get 'cart/:id' => 'carts#show'
+
+  get 'store_front/show/:id' => "store_front#show"
 
   resources :products
 

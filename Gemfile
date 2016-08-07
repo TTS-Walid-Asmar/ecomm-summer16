@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3'
+
 gem 'rails', '4.2.7'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
@@ -14,8 +16,6 @@ gem 'devise'
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'capybara'
 end
 
 group :development do
@@ -23,4 +23,10 @@ group :development do
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :test do
+  gem 'simplecov', require: false
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
